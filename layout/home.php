@@ -1,4 +1,3 @@
-<body>
     <div class="main">
         <?php include (TEMPLATEPATH . '/layout/nav-main.php'); ?>
 
@@ -11,5 +10,3 @@
 
         </section>
     </div>
-</body>
-</html>

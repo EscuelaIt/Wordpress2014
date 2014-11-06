@@ -1,4 +1,4 @@
-<body>
+
     <div class="main">
     <h2>Esto es una PÁGINA</h2>
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -20,5 +20,3 @@
 
         </section>
     </div>
-</body>
-</html>
