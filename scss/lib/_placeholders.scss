@@ -1,0 +1,370 @@
+
+
+
+
+
+/*------------------------------------*\
+    $PLACEHOLDERS
+\*------------------------------------*/
+
+.full-line {
+  width: 100%;
+  @extend %clearfix;
+  margin-bottom: $baseline;
+}
+  .align--center {
+    text-align: center;
+  }
+  .align--right {
+    text-align: right;
+  }
+
+  // Clase asignada a todos los textos que indiquen un precio
+  .precio {
+    font-weight: bold;
+    @include font-size(24);
+  }
+/*
+     * Para poder tener los alert box pegados al borde, metemos
+     * el contenido de la sección en otro contenedor y le damos padding
+*/
+    .padding {
+      padding: $gutterwidth;
+    }
+
+/*
+ * Títulos que llevan un elemento .btn a la derecha como CTA
+ */
+.inline-title {
+  @extend %clearfix;
+  margin-bottom: $gutterwidth;
+  h2 {
+    float:left;
+  }
+  .btn {
+    float: right;
+  }
+}
+
+/*
+ * Elementos en tabla deben ser listas y llevar la clase .table:
+    <ul class="table">
+      <li>...</li>
+      <li>...</li>
+      <li>...</li>
+      ...
+    </ul>
+ */
+
+.table {
+  display: table;
+  width:100%;
+  list-style-type: none;
+  margin: 0 0 $baseline 0;
+  padding: ($baseline / 2) 0;
+  border-bottom: 1px solid $grey;
+  > * {
+    display: table-cell;
+    text-align: center;
+    img {
+      max-width: 80px;
+    }
+  }
+}
+  // Tabla usada para resaltar informaciones, con borde
+  .table--info-assurance {
+    border: 2px solid $grey;
+    border-radius: 3px;
+    line-height: 2;
+    font-weight: bold;
+  }
+
+  // Tabla con todas las celdas al mismo tamaño (Normalmente usada para datos
+  // de usuarios, corredor, etc..)
+  .table--fixed-width {
+    table-layout: fixed;
+  }
+
+  // Tabla compacta, solo DOS items
+  .table--compact {
+    margin-bottom: 0;
+    display: block;
+
+    > * {
+      text-align: left;
+      display: block;
+      padding:0 .3em;
+      &:last-child {
+        text-align: left;
+        padding-left: $gutterwidth;
+        [class^="icon-"], [class*=" icon-"] {
+          margin-left: $gutterwidth / 4;
+        }
+      }
+    }
+  }
+
+    .table__warning-cell {
+      border-left: 2px solid $grey;
+      padding: 0 ($gutterwidth / 4);
+      @include font-size(24);
+    }
+
+.columnas-2 {
+  -moz-column-count: 2;
+   -moz-column-gap: 20px;
+   -webkit-column-count: 2;
+   -webkit-column-gap: 20px;
+}
+
+.posts-home {
+  li {
+    &:first-child {
+      &::before {
+        content: "Título: ";
+        @include font-size(12);
+      }
+    }
+    &:last-child  {
+      &::before {
+        content: "Autor: ";
+        @include font-size(12);
+      }
+    }
+  }
+}
+%text-overflow {
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+}
+
+.steps-bar {
+  list-style: none;
+  margin:0 30px;
+  padding: $gutterwidth;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+
+   li {
+    display: inline-block;
+    padding: 0 2em;
+    line-height: 40px;
+    background: $grey;
+    position: relative;
+    border: 0 $grey; // mismo color que el fondo del LI
+    cursor: pointer;
+
+    + li {
+      margin-left: 18px;
+    }
+    &.current {
+      background-color: $basecolor;
+      color:$white;
+      &::after {
+        border-left-color: $basecolor;
+      }
+    }
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      border: 20px solid transparent; // siempre la mitad que el alto de línea del LI
+      border-right: 0;
+      top: 0;
+    }
+
+    &:before {
+      right: 100%;
+      border-top-color: inherit;
+      border-bottom-color: inherit;
+    }
+
+    &:after {
+      left: 100%;
+      border-left-color: inherit;
+    }
+
+    &:first-child {
+      padding-left: 40px;
+      margin-left: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    &:last-child {
+      padding-right: 40px;
+      margin-right: 0;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+
+
+// Percent Bar
+
+.percent {
+  @include flexbox;
+  margin-bottom: $gutterwidth;
+  .percent__bar {
+    @include flex(1,0,50%);
+    border: 1px solid $grey;
+    border-radius: 3px;
+    height: 30px;
+    padding: 5px;
+    margin-right: $gutterwidth / 2;
+  }
+
+  .percent__innerbar {
+    height: 19px;
+    background-color: lighten($basecolor, 15);
+    border-radius: 3px;
+  }
+  .caption {
+    color:$basecolor;
+  }
+}
+/******************************
+  Star Rating
+******************************/
+.rating-box {
+  margin: 0 auto;
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+
+    }
+    input[type="radio"] {
+    display:none;
+        &:checked ~ label::before {
+            color:$basecolor;
+        }
+    }
+    label {
+        display: inline-block;
+        background-color: transparent;
+     cursor:pointer;
+        &::before {
+            content: "\2605";
+            font-size:16px;
+            color:grey;
+
+        }
+        &:hover::before {
+            color:green;
+        }
+        &:hover ~ label::before {
+            color:green;
+        }
+    }
+}
+    .rating-labels {
+        direction: rtl;
+    }
+
+  /**
+  * The ghost, nudged to maintain perfect centering
+  */
+%vcenter {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+
+  /**
+  * Escondemos el texto solo VISUALMENTE
+  */
+%hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+  /**
+  * Escondemos el texto de VISUALMENTE y SCREENREADERS
+  */
+.hidden {
+	display : none !important;
+	visibility : hidden;
+}
+
+
+  /**
+  * Escondemos pero mantenemos layout.
+  */
+%invisible {
+	visibility : hidden;
+}
+
+
+  /**
+  * Visualmente escondido, pero se puede detectar con teclado (focus).
+  */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	position : static;
+	clip : auto;
+	height : auto;
+	width : auto;
+	margin : 0;
+	overflow: visible;
+}
+
+
+  /**
+  * Clear floats.
+  * http://bit.ly/1e3YaBH
+  */
+%clearfix {
+	&:after{
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+
+
+
+  /**
+  * Gradientes los ocnvertimos en placeholders porque imprime 10 millones de
+  * líneas inútiles en el CSS
+  */
+%basegrad {
+  @include vertical($basecolor, darken($basecolor, 10%));
+}
+
+%errorgrad {
+  @include vertical($basecolor, darken($color-error, 10%));
+}
+
+%greygrad {
+  @include vertical($white, darken($lightergrey, 5%));
+}
+
+%infograd {
+  @include vertical($color-info, darken($color-info, 10%));
+}
+
+%inversegrad {
+  @include vertical($color-info, darken($color-info, 10%));
+}
+
+%successgrad {
+  @include vertical($color-info, darken($color-info, 10%));
+}
+
+%warninggrad {
+  @include vertical($color-warning, darken($color-warning, 10%));
+}

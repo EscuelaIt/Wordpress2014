@@ -1,0 +1,101 @@
+/*------------------------------------*\
+    Modulos ladelpsd
+\*------------------------------------*/
+.modulo__content_ladelpsd {
+    border:2px solid $grey;
+    border-radius:3px;    
+}
+.modulo__ladelpsd__wrapper {
+    padding: 2%;
+}
+.dias-numero {
+    width:45px;
+    line-height: 47px;
+    height:45px;
+    display:inline-block;
+    border-radius:50%;
+    border:1px solid $basecolor;
+    text-align:center;
+    color:#e94640;
+    font-size:32px;
+    vertical-align: middle; 
+}
+.dias-label {
+    color:$nodarkgrey;
+    vertical-align: middle;
+}
+.dias-left {
+    padding: 19px $gutterwidth;
+    border-right:1px solid $grey;
+}
+.dias-right {
+    background-color: #fffbea;
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+
+.modulo__ladelpsd__datos1 {
+    padding:0px $gutterwidth+$column_margin/2;  
+}
+    .modulo__ladelpsd__datos1 .row{
+        border:1px solid #d3d7da;
+        border-radius:$radius/3;    
+        margin-bottom: 3px;            
+    }
+    .modulo__ladelpsd__datos1__c1 {
+        font-weight: bold;
+        font-size: 30px;
+        color:$darkgrey;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .modulo__ladelpsd__datos1__c2 {
+        color:#0047b8;
+        font-weight: bold;
+        font-size: 18px;     
+        padding-top: 20px;
+        padding-bottom: 20px;   
+    }
+    .modulo__ladelpsd__datos1__c3 {
+        font-weight: bold;
+        font-size: 15px;
+        color:$darkgrey;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .modulo__ladelpsd__datos1__c4 {
+        border-left:1px solid $grey;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+.modulo__ladelpsd__datos2 {
+    padding:0px $gutterwidth+$column_margin/2;  
+}
+    .modulo__ladelpsd__datos2 .row{
+        border:1px solid #d3d7da;
+        border-radius:$radius/3;    
+        margin-bottom: 3px;     
+        padding-top: 20px;
+        padding-bottom: 20px;       
+    }
+
+.modulo__ladelpsd__datos3 {
+    padding:0px $gutterwidth+$column_margin/2;  
+    color:$darkgrey;
+}    
+
+
+
+/*******************************
+  Sidebar ladelpsd
+*********************************/
+.main__content__sidebar {
+    border:1px solid $grey;
+    border-radius:3px;    
+}
+
+.content__sidebar__wrapper {
+    padding:$gutterwidth/2 $gutterwidth;
+    color:$darkgrey;
+}

@@ -1,0 +1,99 @@
+
+
+
+
+
+/*------------------------------------*\
+    $FUENTES
+\*------------------------------------*/
+/*
+ * Por defecto incluyo una fuente de icomoon (http://icomoon.io/)
+ * con 5 iconos que se encuentra en la carpeta /fonts.
+ * Ve y adàptalos a tu web.
+ */
+@font-face {
+	font-family: 'icomoon';
+	src:url('#{$font-dir}/icomoon.eot?-tuemc7');
+	src:url('#{$font-dir}/icomoon.eot?#iefix-tuemc7') format('embedded-opentype'),
+		url('#{$font-dir}/icomoon.woff?-tuemc7') format('woff'),
+		url('#{$font-dir}/icomoon.ttf?-tuemc7') format('truetype'),
+		url('#{$font-dir}/icomoon.svg?-tuemc7#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+    content: "\f007";
+}
+.icon-pencil:before {
+    content: "\f040";
+}
+.icon-exclamation-circle:before {
+    content: "\f06a";
+}
+.icon-warning:before {
+    content: "\f071";
+}
+.icon-toggle-right:before {
+    content: "\f152";
+}
+.icon-envelope-o:before {
+    content: "\f003";
+}
+.icon-gear:before {
+    content: "\f013";
+}
+.icon-home:before {
+    content: "\f015";
+}
+.icon-plus:before {
+    content: "\f067";
+}
+.icon-sign-in:before {
+    content: "\f090";
+}
+.icon-credit-card:before {
+    content: "\f09d";
+}
+.icon-comments-o:before {
+    content: "\f0e6";
+}
+.icon-mobile-phone:before {
+    content: "\f10b";
+}
+.icon-toggle-left:before {
+    content: "\f191";
+}
+.icon-automobile:before {
+    content: "\f1b9";
+}
+
+
+
+
+/*------------------------------------*\
+    Vagrounded
+\*------------------------------------*/
+@font-face {
+    font-family: 'VAGRoundedLight';
+    src: url('#{$font-dir}/vagrounded-light.eot');
+    src: url('#{$font-dir}/vagrounded-light.eot') format('embedded-opentype'),
+         url('#{$font-dir}/vagrounded-light.woff2') format('woff2'),
+         url('#{$font-dir}/vagrounded-light.woff') format('woff'),
+         url('#{$font-dir}/vagrounded-light.ttf') format('truetype'),
+         url('#{$font-dir}/vagrounded-light.svg#VAGRoundedLightLight') format('svg');
+}

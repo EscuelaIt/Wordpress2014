@@ -1,0 +1,135 @@
+
+
+
+
+
+/*------------------------------------*\
+    $NAVEGACIÓN
+\*------------------------------------*/
+.checkbox-hack__label {
+    &::before {
+        content: "\f191 Ocultar";
+        font-family: icomoon;
+        display: inline;
+        color: $nodarkgrey;
+        text-shadow: 1px 1px $black;
+    }
+}
+.checkbox__hack {
+    display: none;
+    &:checked ~ {
+    wqtsidebar {
+            .nav {
+                width: 8%;
+                .checkbox-hack__label::before {
+                    content: "\f152 Mostrar";
+                }
+                .text-icon {
+                    display: none;
+                }
+                [class^="icon-"], [class*=" icon-"] {
+                    @include font-size(24);
+                }
+            }
+       }
+        .main {
+            padding-left: 8%;
+        }
+    }
+}
+
+
+    // Main Navigation bar (Vertical one)
+    .nav {
+        padding:0;
+        margin:0;
+        list-style-type: none;
+        position: fixed;
+        top:0;
+        left:0;
+        bottom: 0;
+        min-height: 100vh;
+        width:15%;
+        max-width: 150px;
+        background-color:$darkergrey;
+        -webkit-overflow-scrolling: touch;
+        a, a:visited {
+            color: $lightgrey;
+        }
+    }
+        .nav__item {
+            padding:($baseline) 0;
+            margin:0;
+            text-align: center;
+            color: $lightgrey;
+            background-color:$darkergrey;
+            // height: 20vh;
+            height: 140px;
+            position: relative;
+            img {
+                    max-width: 80px;
+                    width: 80px;
+                }
+            &.current {
+                background-color:darken($darkergrey, 5);
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right:-10px;
+                    @include translate(0, -50%);
+                    width: 0px;
+                    height: 0px;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid transparent;
+                    border-left: 10px solid darken($darkergrey, 5);
+                }
+                .text-icon {
+                    font-weight: bold;
+                }
+            }
+
+            [class^="icon-"], [class*=" icon-"] {
+                @include font-size(32);
+                width: 80px;
+                height: 85px;
+                line-height: 80px;
+                display: inline-block;
+                margin: 0 auto;
+            }
+            .icon-user {
+
+                }
+            .text-icon {
+                text-transform: uppercase;
+                padding-top: 0;
+                display: block;
+                margin: 0 auto;
+                color: $nodarkgrey;
+                text-shadow: 1px 1px $black;
+            }
+        }
+
+            .nav__item--picture {
+            }
+            .nav__item--logo {
+                padding: 4px 0;
+                height: 5vh;
+                min-height:40px;
+            }
+            .nav__item--label {
+                position: absolute;
+                bottom:0;
+                left:0;
+                padding: 0;
+                height: auto;
+                width: 100%;
+                // height: 10vh;
+                border-top: 1px solid $darkgrey;
+            }
+            .nav__item--circle {
+                position: absolute;
+                top: 1em;
+                left:50%;
+                @include translate(-50%, 0%);
+            }

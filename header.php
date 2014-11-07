@@ -15,4 +15,4 @@
 </head>
 
 <!-- Aquí acaba el head de mi web -->
-<body <?php body_class(); ?>>
+<body <?php body_class(["unaclase", "otraclase"]); ?>>

@@ -1,0 +1,52 @@
+
+
+
+
+
+/*------------------------------------*\
+    $NAVEGACIÓN--USUARIO
+\*------------------------------------*/
+
+            .main__options {
+                width: 100%;
+                padding-right: $gutterwidth;
+                text-align: right;
+                background-color: $lightergrey;
+
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                li {
+                        display: inline-block;
+                        line-height: 1.4;
+                        padding: ($baseline / 2) 0;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+
+                    a {
+                        color: $grey;
+                        @include font-size(12);
+                    }
+
+                        i {
+                            display: inline-block;
+                            width: 100%;
+                            font-size: 2em;
+                        }
+            }
+                .main__options--selector {
+                    @extend %clearfix;
+                    ul {
+                        &:first-child {
+                            float:left;
+                            padding-left: $gutterwidth;
+                        }
+                        &:last-child {
+                            float: right
+                        }
+                    }
+                }

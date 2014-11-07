@@ -1,0 +1,36 @@
+
+
+
+
+
+/*------------------------------------*\
+    $COCHE-INPUT
+\*------------------------------------*/
+
+.car-logos {
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include justify-content(space-around);
+   
+    a {
+        width:18%;
+        min-width:150px;
+        border: 1px solid $grey;
+        margin:$gutterwidth;
+        img {
+            max-height:100px;
+        }
+    }
+    figure {
+        margin:0;
+    }
+    figcaption {
+        font-weight:bold;
+    }
+}
+
+
+/*------------------------------------*\
+    $COCHE-DATOS
+\*------------------------------------*/
+

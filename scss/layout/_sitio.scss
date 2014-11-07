@@ -1,0 +1,171 @@
+
+
+
+
+
+/*------------------------------------*\
+    $SITIO
+\*------------------------------------*/
+
+
+@-webkit-viewport {
+	width : device-width;
+}
+
+@-moz-viewport {
+	width : device-width;
+}
+
+@-ms-viewport {
+	width : device-width;
+}
+
+@-o-viewport {
+	width : device-width;
+}
+
+@viewport {
+	width : device-width;
+}
+
+html {
+	background : $background;
+	font-size : 100%;
+	-webkit-overflow-scrolling : touch;
+	-webkit-tap-highlight-color : lighten($basecolor, 75%);
+	-webkit-text-size-adjust : 100%;
+	-ms-text-size-adjust : 100%;
+	font-weight: 300;
+}
+
+body {
+	margin : 0;
+	padding : 0;
+	width : 100%;
+	background-color : transparent;
+	font-family : $basefont;
+	@include font-size();
+	line-height : $baselineheight;
+	color : $textcolor;
+}
+
+
+
+
+	// Container of the .main__options and .main__nav (Both horizontal navigations) and
+	// .main__content
+	.main {
+	        width: 100%;
+	        padding-left: 15%;
+	        height: 100vh;
+	        background-color: $lightergrey;
+	        @include media-query-bp(1000px) {
+	        	padding-left: 150px;
+	        }
+	    }
+
+		// The main content of the layout
+		.main__content  {
+	            @include flexbox;
+	            @include align-items(stretch);
+	            padding: $gutterwidth;
+	            min-height: 450px;
+	            background-color: $lightergrey;
+	        }
+	        	// Las Pantallas a ancho máximo
+				.main__content--fullwidth {
+				   width:calc(100% - (#{$gutterwidth} * 2));
+				   background-color: $white;
+				   border:2px solid $grey;
+	               border-radius: 3px;
+				}
+				/*
+				 * Las de dos columnas llevan estas dos clases:
+				 * .main__content__section
+				 * y
+				 * .main__content__sidebar
+				 */
+	            .main__content__section {
+	                @include flex(1,0,60%);
+	                background-color:$white;
+	                border:2px solid $grey;
+	                border-radius: 3px;
+	                margin-right: $gutterwidth;
+	                padding: $baseline $gutterwidth;
+	            }
+
+	            .main__content__sidebar {
+	                width: 40%;
+	                max-width: 400px;
+	            	background-color: $white;
+	                border:1px solid $grey;
+	                border-radius: 3px;
+	            }
+	            .main__article {
+	            	border-bottom: 1px solid $grey;
+	            	margin-bottom: $baseline;
+	            }
+	.footer {
+		background-color: $white;
+		background-image: url(../img/logo-footer.png);
+		background-repeat: no-repeat;
+		background-position: $gutterwidth center;
+		background-size: 100px;
+		padding-right: $gutterwidth;
+		border-top: 1px solid $grey;
+		ul {
+			margin:0;
+			padding: 0;
+			width: 100%;
+			text-align: right;
+		}
+		li {
+			list-style-type: none;
+			display: inline-block;
+			&:last-child {
+				a {
+					border-right: none;
+				}
+			}
+		}
+		a, a:visited {
+			@include font-size(12);
+			text-transform: uppercase;
+			line-height: 5;
+			border-right: 1px solid $grey;
+			padding: 0 ($gutterwidth / 2);
+			color: $nodarkgrey;
+		}
+	}
+
+.notifications {
+	position: relative;
+	&::after {
+		content: attr(data-notificaciones);
+		@include font-size(12);
+		display: block;
+		color:$white;
+		position: absolute;
+		top:-18px;
+		right:18px;
+		width: 1.5em;
+		height: 1.5em;
+		line-height: 1.5;
+		background-color:$basecolor;
+		border-radius: 100%;
+
+	}
+}
+
+.content-box {
+	border: 1px solid $grey;
+	@extend .padding;
+	position: relative;
+	padding-top: $gutterwidth * 3;
+	.altheader {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+}

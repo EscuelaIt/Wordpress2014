@@ -1,0 +1,80 @@
+
+
+
+
+
+/*------------------------------------*\
+    $MODAL
+\*------------------------------------*/
+.modal{
+
+
+  // This is modal bg
+  &:before{
+    content: "";
+    display: none;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 10;
+  }
+
+  &:target{
+
+    // Active animate in modal
+    &:before{
+      display: block;
+    }
+    .modal-dialog{
+      @include translate(0, 0);
+      top: 20%;
+    }
+
+  }
+
+}
+
+// Modal Dialog
+// ----------------------
+
+.modal-dialog{
+  background: #fefefe;
+  border: $grey solid 1px;
+  border-radius: 5px;
+  margin-left: -200px;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 11;
+  width: 360px;
+  @include translate(0, -500%);
+  @include transition(0.3s ease-out);
+}
+
+.modal-body{
+  padding: $gutterwidth/2;
+}
+
+.modal-header,
+.modal-footer{
+  padding: $gutterwidth/4 $gutterwidth/2;
+}
+
+.modal-header{
+  border-bottom: $lightgrey solid 1px;
+
+  h2{
+    font-size: 20px;
+  }
+
+}
+
+.modal-footer{
+  border-top: $lightgrey solid 1px;
+  text-align: right;
+}
+
+/*ADDED TO STOP SCROLLING TO TOP*/
+#close {
+  display: none;
+}

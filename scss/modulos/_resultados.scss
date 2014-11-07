@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    RESULTADOS
+\*------------------------------------*/
+
+
+.results {
+    display: table;
+    width:100%;
+    text-align: center;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+    .results__row {
+        display: table;
+        border-bottom: 1px solid $lightergrey;
+        width: 100%;
+        padding-bottom: $gutterwidth / 2;
+        margin-bottom: $gutterwidth / 2;
+    }
+        .results__row--header {
+            font-weight: bold;
+            text-align: center;
+        }
+
+    .results__cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+        .results__logo {
+            img {
+                max-height: 50px;
+            }
+        }
+        .results__corredor {
+            width:170px;
+        }
+        .results__figure {
+
+            img {
+                float:left;
+            }
+            figcaption {
+                text-align: left;
+                margin-left: $gutterwidth / 2;
+                float:left;
+                span, small {
+                    display: block;
+                }
+                h6 {
+                    @include font-size(16);
+                    font-weight: normal;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .results__opinions {
+            border-left: 1px solid $grey;
+            border-right: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+            text-align: left;
+            margin-bottom: $gutterwidth;
+            padding-left: 20%;
+            h2 {
+                margin-bottom: 0;
+            }
+            small {
+                margin-bottom: $gutterwidth;
+                span {
+                    color:$basecolor;
+                    margin-right: $gutterwidth / 2;
+                }
+            }
+            .percent {
+                width:50%;
+            }
+        }

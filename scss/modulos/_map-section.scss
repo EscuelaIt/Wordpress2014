@@ -1,0 +1,64 @@
+
+
+
+
+
+/*------------------------------------*\
+    $MAP-SECTION
+\*------------------------------------*/
+
+.map {
+    width:100%;
+    position: relative;
+    margin-bottom: $gutterwidth;
+}
+    .map__content {
+        width:100%;
+    }
+
+    .map__info {
+        position: absolute;
+        top:0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.7);
+        width:50%;
+        max-width: 300px;
+        padding: $gutterwidth / 2;
+        color: $white;
+
+        .table--compact {
+            @include font-size(14);
+            padding-bottom: $gutterwidth / 4 ;
+            margin-bottom: $gutterwidth / 4  ;
+            padding-top: 0;
+            @include font-size(13);
+
+            li {
+                text-align: right;
+            }
+            @include media-query-bp($bp5) {
+                @include font-size(16);
+            }
+        }
+    }
+
+
+
+.object {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.object iframe,  
+.object object,  
+.object embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

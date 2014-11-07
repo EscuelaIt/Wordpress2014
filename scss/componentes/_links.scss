@@ -1,0 +1,33 @@
+
+
+
+
+
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+a {
+	text-decoration : none;
+	color : $linkcolor;
+	-webkit-tap-highlight-color:transparent;
+
+	&:visited {
+		color : $linkcolor;
+	}
+
+	&:hover {
+		text-decoration : none;
+
+	}
+
+	&:focus {
+		outline : thin dotted;
+		color : $linkcolorfocus;
+	}
+
+	&:hover,
+	&:active {
+		outline : 0;
+	}
+}
+

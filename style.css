@@ -1,19 +1,3 @@
-/*
-Theme Name: Wiquot
-Theme URI: http://escuela.it
-Author: Los Alumnos del curso de Wordpress
-Author URI: http://escuela.it/
-Description: Hemos tomado una plantilla en HTML y la hemos adaptado a WordPress.
-Version: 0.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: noobies, test, 2 menus
-Text Domain: twentythirteen
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-*/
-
 @charset "UTF-8";
  /*------------------------------------*\
     $STYLE
@@ -240,6 +224,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
   -moz-column-gap: 20px;
   -webkit-column-count: 2;
   -webkit-column-gap: 20px; }
+
+.posts-home li:first-child::before {
+  content: "Título: ";
+  font-size: 12px;
+  font-size: 0.75rem; }
+.posts-home li:last-child::before {
+  content: "Autor: ";
+  font-size: 12px;
+  font-size: 0.75rem; }
 
 .steps-bar {
   list-style: none;
@@ -911,9 +904,10 @@ h2 small,
 h3 small {
   font-weight: normal;
   display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  color: #4b4b4b; }
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #d3d7da; }
 
 h1, .h1 {
   margin-bottom: 0.375em;
@@ -1742,7 +1736,8 @@ body {
   background-color: white;
   border: 2px solid #d3d7da;
   border-radius: 3px;
-  margin-right: 24px; }
+  margin-right: 24px;
+  padding: 1.5em 24px; }
 
 .main__content__sidebar {
   width: 40%;
@@ -1750,6 +1745,10 @@ body {
   background-color: white;
   border: 1px solid #d3d7da;
   border-radius: 3px; }
+
+.main__article {
+  border-bottom: 1px solid #d3d7da;
+  margin-bottom: 1.5em; }
 
 .footer {
   background-color: white;
@@ -2246,5 +2245,3 @@ body.login {
 /*ADDED TO STOP SCROLLING TO TOP*/
 #close {
   display: none; }
-
-/*# sourceMappingURL=panel.css.map */
