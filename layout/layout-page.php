@@ -7,7 +7,7 @@
 
             <?php include (TEMPLATEPATH . '/layout/main-tabs.php') ?>
             
-            <?php include (TEMPLATEPATH . '/layout/main-content-two-cols.php') ?>
+            <?php include (TEMPLATEPATH . '/layout/main-content-one-cols.php') ?>
 
         </section>
     </div>

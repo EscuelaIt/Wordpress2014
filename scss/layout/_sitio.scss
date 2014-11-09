@@ -76,8 +76,12 @@ body {
 				.main__content--fullwidth {
 				   width:calc(100% - (#{$gutterwidth} * 2));
 				   background-color: $white;
-				   border:2px solid $grey;
-	               border-radius: 3px;
+				   //border:2px solid $grey;
+                                   border-radius: 3px;
+                                   .main__content__section {
+                                        margin-right: 0;
+                                        margin-left: $gutterwidth;
+                                    }
 				}
 				/*
 				 * Las de dos columnas llevan estas dos clases:
