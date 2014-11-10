@@ -1,11 +1,11 @@
 			<div class="main__content">
                 <section class="main__content__section">
-                    <?php 
+                    <?php
                         if(is_home()) {
                             query_posts("cat=-3&order=ASC");
-                        } 
+                        }
                         ?>
-                    
+
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                      <!-- post -->
                      <article class="main__article">
@@ -16,21 +16,46 @@
                                 <small>Fecha: <?php the_date(); ?> por: <a href="http://twitter.com/<?php the_author_meta("twitter"); ?>"> <?php the_author(); ?></a></small>
                             </h2>
                          </header>
+                         <figure><?php
+
+    // $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+    $default_attr = array(
+        'alt'   => the_title_attribute( 'echo=0' ),
+        'title'   => the_title_attribute( 'echo=0' )
+    );
+
+    the_post_thumbnail('thumbnail',  $default_attr  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                         ?></figure>
                          <p>
                              <?php the_excerpt(); ?>
                          </p>
                          <footer>
                              <?php the_tags(); ?>
                          </footer>
-                     </article>  
+                     </article>
 
                      <?php endwhile; ?>
                      <!-- post navigation -->
                      <?php else: ?>
                      <!-- no posts found -->
                      <h3>No hemos encontrado entradas.</h3>
-                     <?php endif; ?> 
-                	
+                     <?php endif; ?>
+
 
                 </section>
                 <?php

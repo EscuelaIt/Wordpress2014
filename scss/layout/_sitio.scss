@@ -105,6 +105,14 @@ body {
 	            	border-bottom: 1px solid $grey;
 	            	margin-bottom: $baseline;
 	            }
+
+			      /*
+						 * El main__content__slide
+						 */
+						.main__content__slide{
+
+						}
+
 	.footer {
 		background-color: $white;
 		background-image: url(../img/logo-footer.png);
@@ -168,4 +176,282 @@ body {
 			left: 0;
 			right: 0;
 		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ * SLIDE de portada
+ *
+ */
+
+section.main__content__slide {
+  height: 320px;
+  width: 100%;
+  margin: 40px auto 0;
+  overflow: visible;
+  position: relative;
+}
+section.main__content__slide ul {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+section.main__content__slide li {
+  width: 100%;
+  height: 320px;
+  position: absolute;
+  left: 0%;
+  right: 0;
+  text-align: center;
+  list-style: none;
+  transition: all 15s ease;
+  // position: relative;
+
+  figcaption{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding: $gutterwidth;
+    background-color: rgba(0,0,0,.8);
+  }
+
+}
+section.main__content__slide li.firstanimation {
+  -moz-animation: cycle 15s linear infinite;
+  -webkit-animation: cycle 15s linear infinite;
+  animation: cycle 15s linear infinite;
+}
+section.main__content__slide li.secondanimation {
+  -moz-animation: cycletwo 15s linear infinite;
+  -webkit-animation: cycletwo 15s linear infinite;
+  animation: cycletwo 15s linear infinite;
+}
+section.main__content__slide li.thirdanimation {
+  -moz-animation: cyclethree 15s linear infinite;
+  -webkit-animation: cyclethree 15s linear infinite;
+  animation: cyclethree 15s linear infinite;
+}
+
+#mask {
+  overflow: hidden;
+  height: 320px;
+}
+
+/* ANIMATION */
+@keyframes cycle {
+  0% {
+    margin-left: 0;
+  }
+  4% {
+    margin-left: 0;
+  }
+  29% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  38% {
+    margin-left: 200%;
+    opacity: 0;
+  }
+  96% {
+    margin-left: -200%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@keyframes cycletwo {
+  0% {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  33% {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  37% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  65% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  66% {
+    margin-left: 0;
+    opacity: 1;
+    z-index: 0;
+  }
+  70% {
+    margin-left: 100%;
+    opacity: 0;
+    z-index: 0;
+  }
+  71% {
+    margin-left: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    margin-left: -100%;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes cyclethree {
+  0% {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  66% {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  70% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  74% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  93% {
+    margin-left: 0;
+    opacity: 1;
+    z-index: 0;
+  }
+  97% {
+    margin-left: 100%;
+    opacity: 0;
+    z-index: 0;
+  }
+  98% {
+    margin-left: -100%;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    margin-left: -100%;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes cycle {
+  0% {
+    margin-left: 0;
+  }
+  4% {
+    margin-left: 0;
+  }
+  29% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  38% {
+    margin-left: 200%;
+    opacity: 0;
+  }
+  96% {
+    margin-left: -200%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes cycletwo {
+  0% {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  33% {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  37% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  65% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  66% {
+    margin-left: 0;
+    opacity: 1;
+    z-index: 0;
+  }
+  70% {
+    margin-left: 100%;
+    opacity: 0;
+    z-index: 0;
+  }
+  71% {
+    margin-left: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    margin-left: -100%;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@-webkit-keyframes cyclethree {
+  0% {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  66% {
+    margin-left: -100%;
+    opacity: 0;
+  }
+  70% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  74% {
+    margin-left: 0;
+    opacity: 1;
+  }
+  93% {
+    margin-left: 0;
+    opacity: 1;
+    z-index: 0;
+  }
+  97% {
+    margin-left: 100%;
+    opacity: 0;
+    z-index: 0;
+  }
+  98% {
+    margin-left: -100%;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    margin-left: -100%;
+    opacity: 0;
+    z-index: -1;
+  }
 }

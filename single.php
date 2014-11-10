@@ -1,4 +1,5 @@
 <?php get_header(); ?>
-<?php include (TEMPLATEPATH . '/layout/layout-single.php'); ?>
+
+<?php get_template_part('layout/layout', 'single'); ?>
 
 <?php get_footer(); ?>
