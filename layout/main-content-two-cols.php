@@ -18,28 +18,13 @@
                          </header>
                          <figure><?php
 
-    // $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-    $default_attr = array(
-        'alt'   => the_title_attribute( 'echo=0' ),
-        'title'   => the_title_attribute( 'echo=0' )
-    );
+                    // $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+                    $default_attr = array(
+                        'alt'   => the_title_attribute( 'echo=0' ),
+                        'title'   => the_title_attribute( 'echo=0' )
+                    );
 
-    the_post_thumbnail('thumbnail',  $default_attr  );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    the_post_thumbnail('thumbnail',  $default_attr  );
                          ?></figure>
                          <p>
                              <?php the_excerpt(); ?>
@@ -56,6 +41,14 @@
                      <h3>No hemos encontrado entradas.</h3>
                      <?php endif; ?>
 
+
+                        <?php if ( is_active_sidebar( 'footer-curso-wp' ) ) : ?>
+                        <!-- #start primary-sidebar -->
+                        <div class="widgets main__content__footer_widgets">
+                            <?php dynamic_sidebar( 'footer-curso-wp' ); ?>
+                        </div>
+                        <!-- #end primary-sidebar -->
+                        <?php endif; ?>
 
                 </section>
                 <?php

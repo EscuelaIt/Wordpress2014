@@ -254,6 +254,33 @@ section.main__content__slide li.thirdanimation {
   height: 320px;
 }
 
+
+// WIDGET AREA
+//
+
+.widgets{
+  &.main__content__footer_widgets{
+    .widget{
+      display: inline-block;
+      float: left;
+      margin-left: 1em;
+      border: 1px solid #CCC;
+      padding: 1em;
+    }
+  }
+  .widget{
+
+  }
+}
+
+
+
+
+
+
+
+
+
 /* ANIMATION */
 @keyframes cycle {
   0% {
