@@ -8,7 +8,7 @@
 
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                      <!-- post -->
-                     <article class="main__article">
+                    <article class="main__article">
                          <header>
                             <h2> <a href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?>
@@ -18,38 +18,34 @@
                          </header>
                          <figure><?php
 
-                    // $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
-                    $default_attr = array(
-                        'alt'   => the_title_attribute( 'echo=0' ),
-                        'title'   => the_title_attribute( 'echo=0' )
-                    );
+                        // $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+                        $default_attr = array(
+                            'alt'   => the_title_attribute( 'echo=0' ),
+                            'title'   => the_title_attribute( 'echo=0' )
+                        );
 
-                    the_post_thumbnail('thumbnail',  $default_attr  );
+                        the_post_thumbnail('thumbnail',  $default_attr  );
                          ?></figure>
-                         <p>
-                             <?php the_excerpt(); ?>
-                         </p>
+                         <div>
+                            <?php if(is_home()): ?>
+                                <?php the_excerpt(); ?>
+                            <?php else: ?>
+                                <?php the_content(); ?>
+                            <?php endif; ?>
+                         </div>
                          <footer>
                              <?php the_tags(); ?>
                          </footer>
                      </article>
 
-                     <?php endwhile; ?>
-                     <!-- post navigation -->
-                     <?php else: ?>
-                     <!-- no posts found -->
-                     <h3>No hemos encontrado entradas.</h3>
-                     <?php endif; ?>
+                    <?php comments_template(); ?>
 
-
-                        <?php if ( is_active_sidebar( 'footer-curso-wp' ) ) : ?>
-                        <!-- #start primary-sidebar -->
-                        <div class="widgets main__content__footer_widgets">
-                            <?php dynamic_sidebar( 'footer-curso-wp' ); ?>
-                        </div>
-                        <!-- #end primary-sidebar -->
-                        <?php endif; ?>
-
+                    <?php endwhile; ?>
+                    <!-- post navigation -->
+                    <?php else: ?>
+                    <!-- no posts found -->
+                    <h3>No hemos encontrado entradas.</h3>
+                    <?php endif; ?>
                 </section>
                 <?php
                     if ( is_home() ) :
