@@ -57,7 +57,12 @@
             color: $lightgrey;
         }
     }
-        .nav__item {
+        .nav__list {
+            list-style-type: none;
+            margin:0;
+            padding: 0;
+
+            .nav__item, .menu-item {
             padding:($baseline) 0;
             margin:0;
             text-align: center;
@@ -70,7 +75,7 @@
                     max-width: 80px;
                     width: 80px;
                 }
-            &.current {
+            &.current-menu-item {
                 background-color:darken($darkergrey, 5);
                 &::after {
                     content: "";
@@ -88,6 +93,8 @@
                     font-weight: bold;
                 }
             }
+        }
+        
 
             [class^="icon-"], [class*=" icon-"] {
                 @include font-size(32);

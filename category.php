@@ -1,5 +1,5 @@
 <?php get_header(); ?>
 
-<?php include (TEMPLATEPATH . '/layout/layout-category.php'); ?>
+<?php get_template_part('layout/layout', 'home'); ?>
 
 <?php get_footer(); ?>
