@@ -3,7 +3,7 @@
 
         <section role="main">
 
-						<?php get_template_part( 'layout/content', 'slide' ); ?>
+			<?php get_template_part( 'layout/content', 'slide' ); ?>
 
             <?php include (TEMPLATEPATH . '/layout/main-options.php') ?>
 
